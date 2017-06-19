@@ -1,5 +1,4 @@
 body {
-  display: flex;
   font-family: Helvetica;
   font-size: 22px;
   color: seashell;
@@ -7,9 +6,6 @@ body {
   opacity: 0.9;
   text-align: center;
   overflow: scroll;
-  flex-wrap: wrap;
-  flex-direction: column;
-  align-items: center;
   margin: 0;
 }
 .header {
@@ -19,6 +15,7 @@ body {
   width: 100%;
   background: black;
   border-bottom: 1px solid seashell;
+  z-index: 1;
 }
 .header .logo {
   padding: 10px;
@@ -33,6 +30,12 @@ body {
 .links span {
   text-decoration: underline;
   padding: 20px 10px;
+}
+.main {
+  padding-top: 69px; /* To offset fixed header */
+  opacity: 0.9;
+  width: 1200px;
+  margin: auto;
 }
 #mission {
   margin-top: 69px;
@@ -83,7 +86,7 @@ body {
   height: 700px;
   align-items: center;
   flex-direction: column;
-  padding-top: 20px;
+  padding-top: 40px;
 }
 #downtown, #bayside, #oakdale {
   display: inline-flex;
@@ -100,10 +103,17 @@ h2 {
 }
 h3 {
   display: flex;
+  justify-content: center;
   margin-left: auto;
   margin-right: auto;
 }
-
+.locations-container p {
+  display: flex;
+  padding: 0 15px;
+  align-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
 .contact {
   background: black;
   opacity: 1;
@@ -114,4 +124,5 @@ h3 {
 .footer {
   text-align: left;
   padding-left: 20px;
+  padding-top: 20px;
 }
